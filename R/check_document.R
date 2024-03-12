@@ -1,3 +1,12 @@
+#' Check current document
+#'
+#' Check current source document.
+#'
+#' @param ask_modify logical
+#' @param language en-US, FR, etc
+#'
+#' @return
+#' @export
 check_document <- function(ask_modify = TRUE, language = "en-US"){
   document_content <- rstudioapi::getSourceEditorContext()
 
@@ -5,6 +14,7 @@ check_document <- function(ask_modify = TRUE, language = "en-US"){
     line_content <- document_content$contents[[l]]
 
     res <- spell_check(text = line_content, language = language)
+
     if(length(res) > 0){
 
       if(ask_modify == TRUE){
