@@ -1,0 +1,5 @@
+Name: Check grammar of a document
+Description: Check grammar with Language Tools API
+Binding: check_document
+Interactive: false
+
