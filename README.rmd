@@ -1,5 +1,9 @@
 # rspell
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 This package aims to provide grammar check in R, specially for RStudio users editing notebooks. As some tools like Grammarly and LanguageTools are not (yet) directly integrated to the IDE, this is a temporary solution.
 
 `rspell` uses the [LanguageTool API](https://languagetool.org/http-api/) and can verify grammar for several languages and was inspired by the [`ggspell`](https://github.com/nicucalcea/ggspell)package.
