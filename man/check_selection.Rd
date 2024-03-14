@@ -4,7 +4,7 @@
 \alias{check_selection}
 \title{Check current selection}
 \usage{
-check_selection(ask_modify = TRUE, language = "en-US")
+check_selection(ask_modify = TRUE, language = "auto")
 }
 \arguments{
 \item{ask_modify}{logical}
