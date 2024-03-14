@@ -1,5 +1,5 @@
-Name: Check grammar of a document
+Name: Check grammar of a selection
 Description: Check grammar with Language Tools API
-Binding: check_document
+Binding: check_selection
 Interactive: false
 
