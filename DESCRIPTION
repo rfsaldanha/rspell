@@ -1,5 +1,5 @@
-Package: rstudiogrammar
-Title: Grammar Check on Documents
+Package: rspell
+Title: Grammar Check and Change on Documents
 Version: 0.0.0.9000
 Authors@R: 
     person("Raphael", "Saldanha", , "raphael.de-freitas-saldanha@inria.fr", role = c("aut", "cre"),
