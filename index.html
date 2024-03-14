@@ -50,34 +50,8 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="rspell">rspell<a class="anchor" aria-label="anchor" href="#rspell"></a>
-</h1></div>
-<p>This package aims to provide grammar check in R, specially for RStudio users editing notebooks. As some tools like Grammarly and LanguageTools are not (yet) directly integrated to the IDE, this is a temporary solution.</p>
-<p><code>rspell</code> uses the <a href="https://languagetool.org/http-api/" class="external-link">LanguageTool API</a> and can verify grammar for several languages and was inspired by the <a href="https://github.com/nicucalcea/ggspell" class="external-link"><code>ggspell</code></a>package.</p>
-<div class="section level2">
-<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h2>
-<p>First, install the package.</p>
-<p><code>{r eval=FALSE} remotes::install_github("rfsaldanha/rspell")</code></p>
-<p>Then, select some text on your notebook and run the <code>check_selection</code> command.</p>
-<p><code>{r eval=FALSE} rspell::check_selection()</code></p>
-<p>At the console, possible grammar errors will be shown, and you will be asked to modify or not the text. The LanguageTool API will automatically try to discover your text language.</p>
-</div>
-<div class="section level2">
-<h2 id="add-in-and-keyboard-shortcut">Add-in and keyboard shortcut<a class="anchor" aria-label="anchor" href="#add-in-and-keyboard-shortcut"></a>
-</h2>
-<p>For a faster use, you can use the package’s RStudio add-in. After installing the package, it will be available at the add-in list. You can also map a <a href="https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE" class="external-link">keyboard shortcut</a> for it, like <code>Ctrl+g</code>.</p>
-</div>
-<div class="section level2">
-<h2 id="more-options">More options<a class="anchor" aria-label="anchor" href="#more-options"></a>
-</h2>
-<p>It is possible to just show the errors without asking to modificate the selection.</p>
-<p><code>{r eval=FALSE} rspell::check_selection(ask_modify = FALSE)</code></p>
-<p>And to specify the language (<a href="https://api.languagetoolplus.com/v2/languages" class="external-link">available options</a> at the API).</p>
-<p><code>{r eval=FALSE} rspell::check_selection(language = "FR")</code></p>
-</div>
-</div>
+  <main id="main" class="col-md-9">
+Grammar check documents with LanguageTools open API.
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
