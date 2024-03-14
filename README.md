@@ -12,13 +12,13 @@ This package aims to provide grammar check in R, specially for RStudio users edi
 
 First, install the package.
 
-```{r eval=FALSE}
+```{r}
 remotes::install_github("rfsaldanha/rspell")
 ```
 
 Then, select some text on your notebook and run the `check_selection` command.
 
-```{r eval=FALSE}
+```{r}
 rspell::check_selection()
 ```
 
