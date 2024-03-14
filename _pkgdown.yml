@@ -1,4 +1,9 @@
 url: https://rfsaldanha.github.io/rspell/
 template:
   bootstrap: 5
+  params:
+    ganalytics: G-2M7VLSRDCB
 
+navbar:
+  structure:
+    right: [github]
