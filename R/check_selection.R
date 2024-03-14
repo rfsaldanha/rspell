@@ -97,6 +97,8 @@ check_selection <- function(ask_modify = TRUE, language = "auto"){
             # Change the document content
             rstudioapi::selectionSet(value = new_sentence, id = doc_id)
 
+          } else {
+            new_sentence <- selection$value
           }
 
         }
