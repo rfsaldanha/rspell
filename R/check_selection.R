@@ -1,8 +1,9 @@
 #' Check current selection
 #'
+#' Check for grammar errors at the current document text selection and provide alterations suggestions if available.
 #'
-#' @param ask_modify logical
-#' @param language en-US, FR, etc
+#' @param ask_modify logical.
+#' @param language code like en-US, FR, etc
 #'
 #' @return nothing.
 #' @export

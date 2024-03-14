@@ -7,13 +7,13 @@
 check_selection(ask_modify = TRUE, language = "auto")
 }
 \arguments{
-\item{ask_modify}{logical}
+\item{ask_modify}{logical.}
 
-\item{language}{en-US, FR, etc}
+\item{language}{code like en-US, FR, etc}
 }
 \value{
 nothing.
 }
 \description{
-Check current selection
+Check for grammar errors at the current document text selection and provide alterations suggestions if available.
 }
