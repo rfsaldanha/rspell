@@ -7,7 +7,12 @@
 #'
 #' @return nothing.
 #' @export
-check_selection <- function(ask_modify = TRUE, language = "auto"){
+check_selection <- function(ask_modify = TRUE, language = NULL){
+  # If language is not defined, try to use the project's default language
+  if(is.null(language)){
+    language <- project_language()
+  }
+
   # Get active document id
   doc_id <- rstudioapi::documentId(allowConsole = FALSE)
 
