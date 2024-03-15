@@ -78,19 +78,26 @@
 <p>At the console, possible grammar errors will be shown, and you will be asked to modify or not the text. The LanguageTool API will automatically try to discover your text language.</p>
 </div>
 <div class="section level2">
+<h2 id="language-selection">Language selection<a class="anchor" aria-label="anchor" href="#language-selection"></a>
+</h2>
+<p>The package will observe if a language was set on project configuration. Set this option, even for English.</p>
+<p>Tools –&gt; Project Options… –&gt; Spelling –&gt; Main dictionary language</p>
+<p>If this is not defined (<code>Default</code> option), the package will let the LanguageTool API try to determine the language based on the text.</p>
+<p>You can also manually specify the language (<a href="https://api.languagetoolplus.com/v2/languages" class="external-link">available options</a> at the API).</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">rspell</span><span class="fu">::</span><span class="fu"><a href="reference/check_selection.html">check_selection</a></span><span class="op">(</span>language <span class="op">=</span> <span class="st">"FR"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
 <h2 id="add-in-and-keyboard-shortcut">Add-in and keyboard shortcut<a class="anchor" aria-label="anchor" href="#add-in-and-keyboard-shortcut"></a>
 </h2>
 <p>For a faster use, you can use the package’s RStudio add-in. After installing the package, it will be available at the add-in list. You can also map a <a href="https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE" class="external-link">keyboard shortcut</a> for it, like <code>Ctrl+g</code>.</p>
 </div>
 <div class="section level2">
-<h2 id="more-options">More options<a class="anchor" aria-label="anchor" href="#more-options"></a>
+<h2 id="modify-or-just-list-the-errors">Modify or just list the errors<a class="anchor" aria-label="anchor" href="#modify-or-just-list-the-errors"></a>
 </h2>
 <p>It is possible to just show the errors without asking to modificate the selection.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">rspell</span><span class="fu">::</span><span class="fu"><a href="reference/check_selection.html">check_selection</a></span><span class="op">(</span>ask_modify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p>And to specify the language (<a href="https://api.languagetoolplus.com/v2/languages" class="external-link">available options</a> at the API).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">rspell</span><span class="fu">::</span><span class="fu"><a href="reference/check_selection.html">check_selection</a></span><span class="op">(</span>language <span class="op">=</span> <span class="st">"FR"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">rspell</span><span class="fu">::</span><span class="fu"><a href="reference/check_selection.html">check_selection</a></span><span class="op">(</span>ask_modify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
