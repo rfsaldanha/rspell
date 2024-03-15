@@ -20,13 +20,13 @@ First, install the package.
 remotes::install_github("rfsaldanha/rspell")
 ```
 
-Then, select some text on your notebook and run the `check_selection` command.
+Then, select some text on RStudio (notebook, script, documentation...) and run the `check_selection` command at the console.
 
 ```{r eval=FALSE}
 rspell::check_selection()
 ```
 
-At the console, possible grammar errors will be shown, and you will be asked to modify or not the text. The LanguageTool API will automatically try to discover your text language.
+Possible grammar errors will be shown at the console, and you will be asked to modify or not the text.
 
 ## Language selection
 
