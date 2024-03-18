@@ -60,6 +60,9 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
 
         # If user wants to modify the text
         if(ask_modify){
+          # Move focus to console
+          rstudioapi::executeCommand("activateConsole")
+
           # Ask if user agrees with the proposed modification
           res_mod <- menu_def(prompt = "Modify the document?")
 
@@ -103,6 +106,9 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
           } else {
             new_sentence <- selection$value
           }
+
+          # Move focus to source
+          rstudioapi::executeCommand("activateSource")
 
         }
       }
