@@ -8,6 +8,7 @@ spell_check <- function(text, language = "auto"){
       `language` = language,
       `enabledOnly` = "false"
     ) |>
+    httr2::req_throttle(rate = 20/60) |>
     httr2::req_retry() |>
     httr2::req_perform() |>
     httr2::resp_body_json()
