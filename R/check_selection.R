@@ -61,10 +61,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
         # If user wants to modify the text
         if(ask_modify){
           # Ask if user agrees with the proposed modification
-          res_mod <- utils::menu(
-            choices = c("Yes", "No"),
-            title = "Do you agree with this modification?"
-          )
+          res_mod <- menu_def(prompt = "Modify the document?")
 
           # If yes
           if(res_mod == 1){
