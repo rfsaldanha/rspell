@@ -19,6 +19,11 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
   # Get selected content
   selection <- rstudioapi::selectionGet(id = doc_id)
 
+  # If selection is empty
+  if(selection == ""){
+    return(NULL)
+  }
+
   # Spell check the selected content
   proof <- spell_check(text = selection$value, language = language)
 
@@ -110,12 +115,14 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
           # Move focus to source
           rstudioapi::executeCommand("activateSource")
 
+          return(NULL)
+
         }
       }
     }
   } else {
     # Print message about no errors found
-    cli::cli_alert_success("No errors found!")
+    cli::cli_alert_success("No errors found on text!")
   }
 }
 
