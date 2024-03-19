@@ -9,6 +9,7 @@ get_project_spelling <- function(){
   rproj_file <- list.files(
     path = project_folder,
     pattern = ".Rproj",
+    ignore.case = TRUE,
     full.names = TRUE
   )[1] # use the first found file, if others are available
 
