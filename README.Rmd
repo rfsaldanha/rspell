@@ -5,7 +5,9 @@ output: github_document
 # rspell
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 This package aims to provide grammar check in R, specially for RStudio users editing notebooks. As some tools like Grammarly and LanguageTools are not (yet) directly integrated to the IDE, this is a temporary solution.
@@ -30,13 +32,17 @@ Possible grammar errors will be shown at the console, and you will be asked to m
 
 ## Language selection
 
-The package will prioritize the spelling dictionary set on project configuration.
+The package will prioritize the spelling dictionary set on RStudio's project configuration.
 
+```         
 Tools --> Project Options... --> Spelling --> Main dictionary language
+```
 
-If not set, the project will use the spelling dictionary set on the Global Options.  
+If not set, the project will use the spelling dictionary set on the Global Options.
 
+```         
 Tools --> Global Options... --> Spelling --> Main dictionary language
+```
 
 You can also manually specify the language ([available options](https://api.languagetoolplus.com/v2/languages) at the API).
 
@@ -57,6 +63,3 @@ It is possible to just show the errors without asking to modificate the selectio
 ```{r eval=FALSE}
 rspell::check_selection(ask_modify = FALSE)
 ```
-
-
-

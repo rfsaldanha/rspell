@@ -4,6 +4,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/rspell/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 This package aims to provide grammar check in R, specially for RStudio
@@ -35,15 +36,15 @@ asked to modify or not the text.
 
 ## Language selection
 
-The package will prioritize the spelling dictionary set on project
-configuration.
+The package will prioritize the spelling dictionary set on RStudio’s
+project configuration.
 
-Tools –\> Project Options… –\> Spelling –\> Main dictionary language
+    Tools --> Project Options... --> Spelling --> Main dictionary language
 
 If not set, the project will use the spelling dictionary set on the
 Global Options.
 
-Tools –\> Global Options… –\> Spelling –\> Main dictionary language
+    Tools --> Global Options... --> Spelling --> Main dictionary language
 
 You can also manually specify the language ([available
 options](https://api.languagetoolplus.com/v2/languages) at the API).
