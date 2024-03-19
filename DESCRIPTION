@@ -11,13 +11,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Imports: 
     cli,
-    fs,
     httr2,
-    jsonlite,
-    rappdirs,
     rstudioapi,
     stringr,
     tibble,
-    tidyr,
-    xfun
+    tidyr
 URL: https://rfsaldanha.github.io/rspell/
