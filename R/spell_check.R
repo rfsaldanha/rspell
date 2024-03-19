@@ -1,6 +1,12 @@
 spell_check <- function(text, language = "auto"){
   # Code adapted from https://github.com/nicucalcea/ggspell
 
+  # Check text size
+  if(as.numeric(utils::object.size(x = text)/1000) > 20){
+    cli::cli_alert_danger("The text is too long. Select a portion of it.")
+    return(NULL)
+  }
+
   # Call API
   res <- httr2::request(base_url = "https://api.languagetool.org/v2/check") |>
     httr2::req_body_form(
@@ -21,3 +27,5 @@ spell_check <- function(text, language = "auto"){
   # Return tibble
   return(res)
 }
+
+
