@@ -1,9 +1,9 @@
-project_language <- function(){
+get_project_spelling <- function(){
   # Active project folder
   project_folder <- rstudioapi::getActiveProject()
 
   # If there is no project, return `auto`
-  if(is.null(project_folder)) return("auto")
+  if(is.null(project_folder)) return(NULL)
 
   # rproj file
   rproj_file <- list.files(
@@ -23,8 +23,8 @@ project_language <- function(){
 
   if(length(rproj_dic) == 0){
     # If there is no definition on project configuration,
-    # return `auto`
-    return("auto")
+    # return NULL
+    return(NULL)
   } else {
     # Else, return the language string
     res <- stringr::str_split_1(string = rproj_dic, pattern = ":")

@@ -12,8 +12,10 @@ RoxygenNote: 7.3.1
 Imports: 
     cli,
     httr2,
+    jsonlite,
     rstudioapi,
     stringr,
     tibble,
-    tidyr
+    tidyr,
+    usethis
 URL: https://rfsaldanha.github.io/rspell/
