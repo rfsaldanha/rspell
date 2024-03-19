@@ -115,8 +115,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
           # Move focus to source
           rstudioapi::executeCommand("activateSource")
 
-          return(NULL)
-
+          cli::cli_alert_success("Done!")
         }
       }
     }

@@ -2,6 +2,7 @@
 
 * Primarily, adopt the spelling language defined on RStudio's Project Options. If not defined, uses the spelling language from Global options.
 * Verifies the text size accordingly to LanguageTool API rules (20KB maximum size).
+* Ignore case on looking for rproj files.
 
 # rspell 0.0.2
 

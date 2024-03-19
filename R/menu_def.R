@@ -24,5 +24,5 @@ menu_def <- function(prompt, choices = c("Yes", "No"), def_pos = 1) {
 
   selected <- as.integer(selected)
 
-  selected
+  return(selected)
 }
