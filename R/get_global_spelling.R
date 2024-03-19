@@ -1,6 +1,13 @@
 get_global_spelling <- function(){
   # Read RStudio global settings
-  res <- jsonlite::read_json(path = normalizePath(path = paste0(usethis:::rstudio_config_path(),"/rstudio-prefs.json")))
+
+  if (xfun::is_windows()) {
+    base <- rappdirs::user_config_dir("RStudio", appauthor = NULL)
+  } else {
+    base <- rappdirs::user_config_dir("rstudio", os = "unix")
+  }
+
+  res <- jsonlite::read_json(path = fs::path(base, "/rstudio-prefs.json"))
 
   # Isolate spelling dictionary
   if(is.null(res$spelling_dictionary_language)){
