@@ -1,3 +1,7 @@
+# rspell 0.0.3
+
+* Primarily, adopt the spelling language defined on RStudio's Project Options. If not defined, uses the spelling language from Global options.
+
 # rspell 0.0.2
 
 * Prompt to modify text with default choice (just press Enter).
