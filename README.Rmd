@@ -30,17 +30,21 @@ Possible grammar errors will be shown at the console, and you will be asked to m
 
 ## Language selection
 
-The package will observe if a language was set on project configuration. Set this option, even for English.
+The package will prioritize the spelling dictionary set on project configuration.
 
 Tools --> Project Options... --> Spelling --> Main dictionary language
 
-If this is not defined (`Default` option), the package will let the LanguageTool API try to determine the language based on the text.
+If not set, the project will use the spelling dictionary set on the Global Options.  
+
+Tools --> Global Options... --> Spelling --> Main dictionary language
 
 You can also manually specify the language ([available options](https://api.languagetoolplus.com/v2/languages) at the API).
 
 ```{r eval=FALSE}
 rspell::check_selection(language = "FR")
 ```
+
+If you set `language = "auto"`, the LanguageTool API will try to guess the language.
 
 ## Add-in and keyboard shortcut
 
