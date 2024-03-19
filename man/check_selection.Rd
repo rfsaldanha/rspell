@@ -9,7 +9,7 @@ check_selection(ask_modify = TRUE, language = NULL)
 \arguments{
 \item{ask_modify}{logical.}
 
-\item{language}{code like en-US, FR, etc}
+\item{language}{code like en-US, fr-FR, etc}
 }
 \value{
 nothing.

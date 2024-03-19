@@ -3,14 +3,14 @@
 #' Check for grammar errors at the current document text selection and provide alterations suggestions if available.
 #'
 #' @param ask_modify logical.
-#' @param language code like en-US, FR, etc
+#' @param language code like en-US, fr-FR, etc
 #'
 #' @return nothing.
 #' @export
 check_selection <- function(ask_modify = TRUE, language = NULL){
   # If language is not defined, try to use the project's default language
   if(is.null(language)){
-    language <- project_language()
+    language <- get_spelling()
   }
 
   # Get active document id
