@@ -21,4 +21,4 @@ Imports:
 Suggests:
     jsonlite
 URL: https://rfsaldanha.github.io/rspell/
-BugReports: https://rfsaldanha.github.io/rspell/issues
+BugReports: https://github.com/rfsaldanha/rspell/issues
