@@ -33,7 +33,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
   }
 
   # Spell check the selected content
-  proof <- spell_check(text = selection$value, language = language)
+  proof <- check_text(text = selection$value, language = language)
 
   # If proof is valid
   adj <- 0
