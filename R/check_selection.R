@@ -29,7 +29,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
 
   # If selection is empty
   if(selection == ""){
-    cli_abort("No text selected. Please select some text in a document.")
+    cli::cli_abort("No text selected. Please select some text in a document.")
   }
 
   # Spell check the selected content
