@@ -2,13 +2,14 @@
 #'
 #' Check for grammar errors on the selected text and recommend corrections when possible.
 #'
+#' @param text character. Select a text on the document or provide a text.
 #' @param ask_modify logical. When `TRUE`, a prompt will be shown asking to alter the document with the correction or not.
-#' @param language character. Code like en-US, fr-FR, etc
+#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` for automatic language detection.
 #'
 #' @return No object is return from this function, as it expects to be run in an interactive session.
 #'
 #' @export
-check_selection <- function(ask_modify = TRUE, language = NULL){
+check_selection <- function(text = NULL, ask_modify = TRUE, language = NULL){
   # Arguments check
   checkmate::assert_logical(x = ask_modify)
   checkmate::assert_string(x = language)
@@ -24,11 +25,13 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
     language <- get_spelling()
   }
 
-  # Get active document id
-  doc_id <- rstudioapi::documentId(allowConsole = FALSE)
-
-  # Get selected content
-  selection <- rstudioapi::selectionGet(id = doc_id)
+  # Get selected content or provided text
+  if(is.null(text)){
+    doc_id <- rstudioapi::documentId(allowConsole = FALSE)
+    selection <- rstudioapi::selectionGet(id = doc_id)
+  } else {
+    selection <- text
+  }
 
   # If selection is empty
   if(selection == ""){
