@@ -9,6 +9,10 @@
 #'
 #' @export
 check_selection <- function(ask_modify = TRUE, language = NULL){
+  # Arguments check
+  checkmate::assert_logical(x = ask_modify)
+  checkmate::assert_string(x = language)
+
   # Check if RStudio is running
   if(!rstudioapi::isAvailable()){
     cli::cli_alert_danger("This function needs to be run within RStudio.")
