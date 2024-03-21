@@ -1,3 +1,9 @@
+# rspell 0.0.5
+
+* Function `check_text()` in now exported.
+* Improve messages.
+* Modify internal function names.
+
 # rspell 0.0.4
 
 * Improve documentation and arguments assertion.
