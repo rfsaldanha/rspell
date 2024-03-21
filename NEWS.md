@@ -1,3 +1,7 @@
+# rspell 0.0.4
+
+* Improve documentation and arguments assertion.
+
 # rspell 0.0.3
 
 * Primarily, adopt the spelling language defined on RStudio's Project Options. If not defined, uses the spelling language from Global options.
