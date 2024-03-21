@@ -1,11 +1,12 @@
 #' Check current selection
 #'
-#' Check for grammar errors at the current document text selection and provide alterations suggestions if available.
+#' Check for grammar errors on the selected text and recommend corrections when possible.
 #'
-#' @param ask_modify logical.
-#' @param language code like en-US, fr-FR, etc
+#' @param ask_modify logical. When `TRUE`, a prompt will be shown asking to alter the document with the correction or not.
+#' @param language character. Code like en-US, fr-FR, etc
 #'
-#' @return nothing.
+#' @return No object is return from this function, as it expects to be run in an interactive session.
+#'
 #' @export
 check_selection <- function(ask_modify = TRUE, language = NULL){
   # If language is not defined, try to use the project's default language
