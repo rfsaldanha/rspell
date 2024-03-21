@@ -1,5 +1,5 @@
 spell_check <- function(text, language = "auto"){
-  # Check text size
+  # Check text size (max on 20Kb)
   if(as.numeric(utils::object.size(x = text)/1000) > 20){
     cli::cli_alert_danger("The text is too long. Select a portion of it.")
     return(NULL)
