@@ -15,8 +15,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
 
   # Check if RStudio is running
   if(!rstudioapi::isAvailable()){
-    cli::cli_alert_danger("This function needs to be run within RStudio.")
-    stop()
+    cli::cli_abort("This function needs to be run within RStudio.")
   }
 
   # If language is not defined, try to use the project's default language
@@ -30,8 +29,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
 
   # If selection is empty
   if(selection == ""){
-    cli::cli_alert_danger("No text selected.")
-    stop()
+    cli_abort("No text selected. Please select some text in a document.")
   }
 
   # Spell check the selected content
