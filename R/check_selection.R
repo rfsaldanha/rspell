@@ -77,7 +77,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
           rstudioapi::executeCommand("activateConsole")
 
           # Ask if user agrees with the proposed modification
-          res_mod <- menu_def(prompt = "Modify the document?")
+          res_mod <- menu_def(prompt = "Do you want to modify the document?")
 
           # If yes
           if(res_mod == 1){
