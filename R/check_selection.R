@@ -2,7 +2,6 @@
 #'
 #' Check for grammar errors on the selected text and recommend corrections when possible.
 #'
-#' @param text character. Select a text on the document or provide a text.
 #' @param ask_modify logical. When `TRUE`, a prompt will be shown asking to alter the document with the correction or not.
 #' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` for automatic language detection.
 #'
@@ -25,17 +24,13 @@ check_selection <- function(text = NULL, ask_modify = TRUE, language = NULL){
     language <- get_spelling()
   }
 
-  # Get selected content or provided text
-  if(is.null(text)){
-    doc_id <- rstudioapi::documentId(allowConsole = FALSE)
-    selection <- rstudioapi::selectionGet(id = doc_id)
-  } else {
-    selection <- text
-  }
+  # Get selected content
+  doc_id <- rstudioapi::documentId(allowConsole = FALSE)
+  selection <- rstudioapi::selectionGet(id = doc_id)
 
   # If selection is empty
   if(selection == ""){
-    cli::cli_alert_danger("No text provided.")
+    cli::cli_alert_danger("No text selected.")
     stop()
   }
 
