@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' check_text("O rato roeu a roupa do rei de roma.", language = "pt-BR)
+#' check_text("O rato roeu a roupa do rei de roma.", language = "pt-BR")
 #' check_text("Bernardo climb the stairs to the castle’s ramparts.", language = "auto")
 check_text <- function(text, language = "auto"){
   # Check text size (max on 20Kb)

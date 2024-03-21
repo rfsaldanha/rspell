@@ -17,4 +17,6 @@ Imports:
     stringr,
     tibble,
     tidyr
+Suggests:
+    jsonlite
 URL: https://rfsaldanha.github.io/rspell/
