@@ -7,13 +7,13 @@
 check_selection(ask_modify = TRUE, language = NULL)
 }
 \arguments{
-\item{ask_modify}{logical.}
+\item{ask_modify}{logical. When \code{TRUE}, a prompt will be shown asking to alter the document with the correction or not.}
 
-\item{language}{code like en-US, fr-FR, etc}
+\item{language}{character. Code like en-US, fr-FR, etc}
 }
 \value{
-nothing.
+No object is return from this function, as it expects to be run in an interactive session.
 }
 \description{
-Check for grammar errors at the current document text selection and provide alterations suggestions if available.
+Check for grammar errors on the selected text and recommend corrections when possible.
 }
