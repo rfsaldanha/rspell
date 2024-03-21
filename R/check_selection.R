@@ -9,6 +9,12 @@
 #'
 #' @export
 check_selection <- function(ask_modify = TRUE, language = NULL){
+  # Check if RStudio is running
+  if(!rstudioapi::isAvailable()){
+    cli::cli_alert_danger("This function needs to be run within RStudio.")
+    stop()
+  }
+
   # If language is not defined, try to use the project's default language
   if(is.null(language)){
     language <- get_spelling()
