@@ -12,7 +12,7 @@
 check_selection <- function(text = NULL, ask_modify = TRUE, language = NULL){
   # Arguments check
   checkmate::assert_logical(x = ask_modify)
-  checkmate::assert_string(x = language)
+  checkmate::assert_string(x = language, null.ok = TRUE)
 
   # Check if RStudio is running
   if(!rstudioapi::isAvailable()){
