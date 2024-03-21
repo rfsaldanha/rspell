@@ -1,10 +1,10 @@
 Package: rspell
-Title: Grammar Check and Change on Documents
+Title: Grammar Check Documents on RStudio
 Version: 0.0.5
 Authors@R: 
     person("Raphael", "Saldanha", , "raphael.de-freitas-saldanha@inria.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0652-8466"))
-Description: Grammar check documents with LanguageTools open API.
+Description: Grammar check documents with LanguageTools open API directly at Posit's RStudio.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -21,3 +21,4 @@ Imports:
 Suggests:
     jsonlite
 URL: https://rfsaldanha.github.io/rspell/
+BugReports: https://rfsaldanha.github.io/rspell/issues
