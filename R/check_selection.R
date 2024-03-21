@@ -8,7 +8,7 @@
 #' @return No object is return from this function, as it expects to be run in an interactive session.
 #'
 #' @export
-check_selection <- function(text = NULL, ask_modify = TRUE, language = NULL){
+check_selection <- function(ask_modify = TRUE, language = NULL){
   # Arguments check
   checkmate::assert_logical(x = ask_modify)
   checkmate::assert_string(x = language, null.ok = TRUE)
