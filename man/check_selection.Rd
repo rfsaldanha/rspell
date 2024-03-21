@@ -4,7 +4,7 @@
 \alias{check_selection}
 \title{Check current selection}
 \usage{
-check_selection(text = NULL, ask_modify = TRUE, language = NULL)
+check_selection(ask_modify = TRUE, language = NULL)
 }
 \arguments{
 \item{ask_modify}{logical. When \code{TRUE}, a prompt will be shown asking to alter the document with the correction or not.}
