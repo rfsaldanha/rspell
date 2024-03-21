@@ -10,6 +10,11 @@
 #' check_text("O rato roeu a roupa do rei de roma.", language = "pt-BR")
 #' check_text("Bernardo climb the stairs to the castle’s ramparts.", language = "auto")
 check_text <- function(text, language = "auto"){
+  # Check if internet connection is available
+  if(curl::has_internet()){
+    cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTools API. Please check your Internet connection.")
+  }
+
   # Check text size (max on 20Kb)
   if(as.numeric(utils::object.size(x = text)/1000) > 20){
     cli::cli_alert_danger("The text is too long. Select a portion of it.")
