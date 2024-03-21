@@ -129,7 +129,8 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
     }
   } else {
     # Print message about no errors found
-    cli::cli_alert_success("No errors found on text!")
+    cli::cli_h1(text = "Grammar check")
+    cli::cli_alert_success("No errors found on text.")
   }
 }
 
