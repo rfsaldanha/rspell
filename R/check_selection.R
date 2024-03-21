@@ -35,7 +35,8 @@ check_selection <- function(text = NULL, ask_modify = TRUE, language = NULL){
 
   # If selection is empty
   if(selection == ""){
-    return(NULL)
+    cli::cli_alert_danger("No text provided.")
+    stop()
   }
 
   # Spell check the selected content
