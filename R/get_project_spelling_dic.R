@@ -1,4 +1,4 @@
-get_project_spelling <- function(){
+get_project_spelling_dic <- function(){
   # Active project folder
   project_folder <- rstudioapi::getActiveProject()
 

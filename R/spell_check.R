@@ -1,6 +1,4 @@
 spell_check <- function(text, language = "auto"){
-  # Code adapted from https://github.com/nicucalcea/ggspell
-
   # Check text size
   if(as.numeric(utils::object.size(x = text)/1000) > 20){
     cli::cli_alert_danger("The text is too long. Select a portion of it.")

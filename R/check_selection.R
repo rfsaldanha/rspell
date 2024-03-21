@@ -21,7 +21,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
 
   # If language is not defined, try to use the project's default language
   if(is.null(language)){
-    language <- get_spelling()
+    language <- get_spelling_dic()
   }
 
   # Get selected content
