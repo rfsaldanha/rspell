@@ -66,7 +66,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
       cli::cli_alert_danger(paste0(sentence_start, cli::col_red(mistake), sentence_end))
 
       # If correction exists...
-      if (!is.na(proof$replacements[[i]][[1]])) {
+      if (!is.na(proof$replacements[[i]][[1]][[1]])) {
         # Print correction
         correct_spelling <- proof$replacements[[i]][[1]]$value |> unlist()
         cli::cli_alert_success(paste0(sentence_start, cli::col_green(correct_spelling), sentence_end))
