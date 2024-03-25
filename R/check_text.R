@@ -10,6 +10,9 @@
 #' check_text("O rato roeu a roupa do rei de roma.", language = "pt-BR")
 #' check_text("Bernardo climb the stairs to the castle’s ramparts.", language = "auto")
 check_text <- function(text, language = "auto"){
+  # Arguments check
+  checkmate::assert_character(x = text)
+
   # Check if internet connection is available
   if(!curl::has_internet()){
     cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTools API. Please check your Internet connection.")
