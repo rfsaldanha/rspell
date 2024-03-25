@@ -9,7 +9,7 @@ check_text(text, language = "auto")
 \arguments{
 \item{text}{character. A character object with text to be check.}
 
-\item{language}{character. Code like \code{en-US}, \code{fr-FR}, etc. Or \code{auto} (default) for automatic language detection.}
+\item{language}{character. Code like \code{en-US}, \code{fr-FR}, etc. Or \code{auto} (default) for automatic language detection. Use \code{get_languages()} to get a list of supported languages at the LanguageTools API.}
 }
 \value{
 a tibble with grammar checks.
