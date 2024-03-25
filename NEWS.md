@@ -1,6 +1,6 @@
 # rspell 0.0.6
 
-* New function `get_languages()` to get a tibble with LanguageTools's API supported languages. 
+* New function `get_languages()` to get a tibble with LanguageTool's API supported languages. 
 * Validates language argument on functions. 
 * Internal test functions.
 

@@ -10,7 +10,7 @@ get_languages()
 a tibble.
 }
 \description{
-Returns a tibble of supported languages from LanguageTools API, with language name, code and long code.
+Returns a tibble of supported languages from LanguageTool API, with language name, code and long code.
 }
 \examples{
 \dontshow{if (curl::has_internet()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}

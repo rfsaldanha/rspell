@@ -1,7 +1,7 @@
 #' Grammar check a text
 #'
 #' @param text character. A character object with text to be check.
-#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` (default) for automatic language detection. Use `get_languages()` to get a list of supported languages at the LanguageTools API.
+#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` (default) for automatic language detection. Use `get_languages()` to get a list of supported languages at the LanguageTool API.
 #'
 #' @return a tibble with grammar checks.
 #' @export

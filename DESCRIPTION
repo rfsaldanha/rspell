@@ -4,7 +4,7 @@ Version: 0.0.6
 Authors@R: 
     person("Raphael", "Saldanha", , "raphael.de-freitas-saldanha@inria.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0652-8466"))
-Description: Grammar check documents with 'LanguageTools' open Application Programming Interface (API) directly at 'RStudio' Integrated Development Environment (IDE). The API documentation is available at <https://languagetool.org/http-api/>.
+Description: Grammar check documents with 'LanguageTool' open Application Programming Interface (API) directly at 'RStudio' Integrated Development Environment (IDE). The API documentation is available at <https://languagetool.org/http-api/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

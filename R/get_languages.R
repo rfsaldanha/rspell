@@ -1,6 +1,6 @@
 #' Get supported languages from LanguageTool API
 #'
-#' Returns a tibble of supported languages from LanguageTools API, with language name, code and long code.
+#' Returns a tibble of supported languages from LanguageTool API, with language name, code and long code.
 #'
 #' @return a tibble.
 #' @export
@@ -10,7 +10,7 @@
 get_languages <- function(){
   # Check if internet connection is available
   if(!curl::has_internet()){
-    cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTools API. Please check your Internet connection.")
+    cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTool API. Please check your Internet connection.")
   }
 
   res <- httr2::request(base_url = "https://api.languagetool.org/v2/languages") |>

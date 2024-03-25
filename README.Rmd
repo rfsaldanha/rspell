@@ -10,7 +10,7 @@ output: github_document
 
 <!-- badges: end -->
 
-This package aims to provide grammar check in R, specially for RStudio users editing notebooks. As some tools like Grammarly and LanguageTools are not (yet) directly integrated to the IDE, this is a temporary solution.
+This package aims to provide grammar check in R, specially for RStudio users editing notebooks. As some tools like Grammarly and LanguageTool are not (yet) directly integrated to the IDE, this is a temporary solution.
 
 `rspell` uses the [LanguageTool API](https://languagetool.org/http-api/) and can verify grammar for several languages and was inspired by the [`ggspell`](https://github.com/nicucalcea/ggspell)package.
 
