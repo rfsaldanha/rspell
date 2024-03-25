@@ -1,9 +1,9 @@
-#' Check current selection
+#' Check current selection on RStudio
 #'
-#' Check for grammar errors on the selected text and recommend corrections when possible.
+#' Check for grammar errors on the selected text on a document opened at RStudio and recommend corrections when possible.
 #'
 #' @param ask_modify logical. When `TRUE`, a prompt will be shown asking to alter the document with the correction or not.
-#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` for automatic language detection.
+#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` for automatic language detection. Check the list of supported languages with `check_languages()`.
 #'
 #' @return No object is return from this function, as it expects to be run in an interactive session.
 #'
@@ -13,9 +13,14 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
   checkmate::assert_logical(x = ask_modify)
   checkmate::assert_string(x = language, null.ok = TRUE)
 
-  # Check if RStudio is running
+  # Check for interactive session
+  if(!interactive()){
+    cli::cli_abort("This function needs to be run within RStudio in an interactive session.")
+  }
+
+  # Check for if RStudio is running
   if(!rstudioapi::isAvailable()){
-    cli::cli_abort("This function needs to be run within RStudio.")
+    cli::cli_abort("This function needs to be run within RStudio in an interactive session.")
   }
 
   # If language is not defined, try to use the project's default language
