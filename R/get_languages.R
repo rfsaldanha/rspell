@@ -14,7 +14,6 @@ get_languages <- function(){
   }
 
   res <- httr2::request(base_url = "https://api.languagetool.org/v2/languages") |>
-    httr2::req_throttle(rate = 20/60) |>
     httr2::req_retry() |>
     httr2::req_perform() |>
     httr2::resp_body_json() |>
