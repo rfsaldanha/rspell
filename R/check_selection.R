@@ -51,7 +51,7 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
     }
 
     proof$keep <- ifelse(proof$shortMessage == "Spelling mistake" & proof$mistake %in% get_user_dic(), FALSE, TRUE)
-    proof <- subset(proof, keep == TRUE)
+    proof <- subset(proof, proof$keep == TRUE)
     proof$keep <- NULL
   }
 
