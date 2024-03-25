@@ -1,7 +1,7 @@
 #' Grammar check a text
 #'
 #' @param text character. A character object with text to be check.
-#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` (default) for automatic language detection.
+#' @param language character. Code like `en-US`, `fr-FR`, etc. Or `auto` (default) for automatic language detection. Use `get_languages()` to get a list of supported languages at the LanguageTools API.
 #'
 #' @return a tibble with grammar checks.
 #' @export
@@ -10,8 +10,13 @@
 #' check_text("O rato roeu a roupa do rei de roma.", language = "pt-BR")
 #' check_text("Bernardo climb the stairs to the castle’s ramparts.", language = "auto")
 check_text <- function(text, language = "auto"){
-  # Arguments check
+  # Check text argument
   checkmate::assert_character(x = text)
+
+  # Check language argument
+  avail_lang <- get_languages()$longCode
+  avail_lang <- c(avail_lang, "auto")
+  checkmate::assert_choice(x = language, choices = avail_lang)
 
   # Check if internet connection is available
   if(!curl::has_internet()){
