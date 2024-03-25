@@ -40,9 +40,24 @@ check_selection <- function(ask_modify = TRUE, language = NULL){
   # Spell check the selected content
   proof <- check_text(text = selection$value, language = language)
 
+  # Remove spelling mistakes that are on user's dictionary
+  if(nrow(proof) > 0){
+    proof$mistake <- NA
+    for(i in 1:nrow(proof)){
+      sentence <- gsub("\r", "\n", proof$context[[i]]$text)
+      proof[i,"mistake"] <- substring(sentence,
+                                proof$context[[i]]$offset + 1,
+                                proof$context[[i]]$offset + proof$context[[i]]$length)
+    }
+
+    proof$keep <- ifelse(proof$shortMessage == "Spelling mistake" & proof$mistake %in% get_user_dic(), FALSE, TRUE)
+    proof <- subset(proof, keep == TRUE)
+    proof$keep <- NULL
+  }
+
   # If proof is valid
   adj <- 0
-  if(length(proof) > 0){
+  if(length(proof) > 0 & nrow(proof) > 0){
     # For each response on proof...
     for(i in 1:nrow(proof)){
       # Original sentence
