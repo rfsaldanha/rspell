@@ -2,3 +2,4 @@
 
 export(check_selection)
 export(check_text)
+export(get_languages)
