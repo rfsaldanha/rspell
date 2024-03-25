@@ -34,6 +34,14 @@ rspell::check_selection()
 Possible grammar errors will be shown at the console, and you will be
 asked to modify or not the text.
 
+## Add-in keyboard shortcut
+
+For a faster use, you can use the package’s RStudio add-in. After
+installing the package, it will be available at the add-in list. You can
+also map a [keyboard
+shortcut](https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE)
+for it, like `Ctrl+g`.
+
 ## Language selection
 
 The package will prioritize the spelling dictionary set on RStudio’s
@@ -46,8 +54,7 @@ Global Options.
 
     Tools --> Global Options... --> Spelling --> Main dictionary language
 
-You can also manually specify the language ([available
-options](https://api.languagetoolplus.com/v2/languages) at the API).
+You can also manually specify the language.
 
 ``` r
 rspell::check_selection(language = "FR")
@@ -56,17 +63,19 @@ rspell::check_selection(language = "FR")
 If you set `language = "auto"`, the LanguageTool API will try to guess
 the language.
 
-## Add-in and keyboard shortcut
+The available list of language codes is listed with the function
+`get_languages()`.
 
-For a faster use, you can use the package’s RStudio add-in. After
-installing the package, it will be available at the add-in list. You can
-also map a [keyboard
-shortcut](https://support.posit.co/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts-in-the-RStudio-IDE)
-for it, like `Ctrl+g`.
+## User dictionary
+
+The package will skip spelling errors that are listed on the RStudio
+user’s dictionary:
+
+    Tools --> Global options... --> Spelling --> Edit User Dictionary...
 
 ## Modify or just list the errors
 
-It is possible to just show the errors without asking to modificate the
+It is possible to just show the errors without asking to change the
 selection.
 
 ``` r
