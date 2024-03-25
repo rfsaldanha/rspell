@@ -2,18 +2,18 @@
 % Please edit documentation in R/check_selection.R
 \name{check_selection}
 \alias{check_selection}
-\title{Check current selection}
+\title{Check current selection on RStudio}
 \usage{
 check_selection(ask_modify = TRUE, language = NULL)
 }
 \arguments{
 \item{ask_modify}{logical. When \code{TRUE}, a prompt will be shown asking to alter the document with the correction or not.}
 
-\item{language}{character. Code like \code{en-US}, \code{fr-FR}, etc. Or \code{auto} for automatic language detection.}
+\item{language}{character. Code like \code{en-US}, \code{fr-FR}, etc. Or \code{auto} for automatic language detection. Check the list of supported languages with \code{check_languages()}.}
 }
 \value{
 No object is return from this function, as it expects to be run in an interactive session.
 }
 \description{
-Check for grammar errors on the selected text and recommend corrections when possible.
+Check for grammar errors on the selected text on a document opened at RStudio and recommend corrections when possible.
 }
