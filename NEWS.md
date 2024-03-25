@@ -1,3 +1,7 @@
+# rspell 0.0.7
+
+* Skip spelling errors that are listed on RStudio user's dictionary.
+
 # rspell 0.0.6
 
 * New function `get_languages()` to get a tibble with LanguageTool's API supported languages. 

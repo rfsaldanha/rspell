@@ -1,6 +1,6 @@
 Package: rspell
 Title: Grammar Check Documents on RStudio
-Version: 0.0.6
+Version: 0.0.7
 Authors@R: 
     person("Raphael", "Saldanha", , "raphael.de-freitas-saldanha@inria.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0652-8466"))
