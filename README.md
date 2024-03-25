@@ -8,7 +8,7 @@
 <!-- badges: end -->
 
 This package aims to provide grammar check in R, specially for RStudio
-users editing notebooks. As some tools like Grammarly and LanguageTools
+users editing notebooks. As some tools like Grammarly and LanguageTool
 are not (yet) directly integrated to the IDE, this is a temporary
 solution.
 
