@@ -20,7 +20,7 @@ check_text <- function(text, language = "auto"){
 
   # Check if internet connection is available
   if(!curl::has_internet()){
-    cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTools API. Please check your Internet connection.")
+    cli::cli_abort(message = "An Internet connection is needed to connect to the LanguageTool API. Please check your Internet connection.")
   }
 
   # Check text size (max on 20Kb)
